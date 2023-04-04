@@ -1,0 +1,73 @@
+div {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+}
+
+.row {
+  padding: 20px;
+  margin-right: 0px;
+  border-left: dashed 1px rgb(60, 255, 0);
+  border-right: dashed 1px rgb(60, 255, 0);
+  border-bottom: dashed 2px rgb(60, 255, 0);
+}
+
+#name-container{
+  margin: 20px 0px 20px 0px;
+}
+
+#main-name {
+  margin-top: 10%;
+  font-weight: bold;
+}
+
+#profile-img{
+  border-radius: 50px;
+  box-shadow: 3px 3px 3px rgb(0, 102, 255);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+#about{
+  margin-top: 1%;
+  padding: 15px;
+}
+
+#about p{
+  margin-top: 20px;
+}
+
+#about-me{
+  margin-top: 20px;
+  color: rgb(2, 2, 2);
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px red;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+#dev{
+  color: rgb(0, 119, 255);
+  font-weight: bold;
+}
+/* profile image styles with media queries*/
+
+@media (max-width: 767px) {
+  #profile-img {
+    position: relative;
+    width: 50%;
+    border-radius: 180px;
+    box-shadow: 2px 2px 2px rgb(255, 0, 0);
+    left: 2%;
+    top: 10px;
+    -webkit-border-radius: 180px;
+    -moz-border-radius: 180px;
+    -ms-border-radius: 180px;
+    -o-border-radius: 180px;
+  }
+}
