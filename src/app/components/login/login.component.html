@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1 col-md-3 col-lg-6 col-xl-6 col-xxl-7">
+      <div class="card">
+        <form #f="ngForm" (ngSubmit)="onLogin()" nonvalidate>
+          <h1>INGRESO</h1>
+          <p> INGRESA TU USUARIO Y CONTRASEÑA PARA ENTRAR</p>
+          <input type="email" name="nombreUsuario" id="nombreUsuario" for="nombreUsuario" placeholder="NOMBRE DE USUARIO" [(ngModel)]="nombreUsuario" required>
+          <input type="password" name="contraseña" id="contraseña" for="contraseña" placeholder="CONTRASEÑA" [(ngModel)]="contraseña" required>
+          <input type="submit" name="" value="INGRESAR" href="#">
+          <div class="col-md-12">
+            <ul class="social-network social-circle">
+              <h2 class="contact">CONTACTO</h2>
+              <li>
+                <a href="https://www.facebook.com/abel.velez/" class="icoFacebook" title="Facebook" target="_blank">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/abel_velez" class="icoTwitter" title="Twitter" target="_blank">
+                  <i class="bi bi-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/abel_velezcde/" class="icoInstagram" title="Instagram"
+                  target="_blank">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/abelfv" class="icoGithub" title="Github" target="_blank">
+                  <i class="bi bi-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
