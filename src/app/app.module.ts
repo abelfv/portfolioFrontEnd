@@ -7,17 +7,19 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CoverComponent } from './components/cover/cover.component';
 import { AboutComponent } from './components/about/about.component';
-import { ExperienceComponent } from './components/experience/experience.component';
+import { ExperienciaComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { interceptorProvider } from './service/interceptor-service';
 import { FormsModule } from '@angular/forms';
+import { NewExperienciaComponent } from './components/experience/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experience/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +28,15 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     CoverComponent,
     AboutComponent,
-    ExperienceComponent,
+    ExperienciaComponent,
     EducationComponent,
     SkillsComponent,
     ProjectsComponent,
     FooterComponent,
     HomeComponent,
     LoginComponent,
-
+    NewExperienciaComponent,
+    EditExperienciaComponent,
   ],
   imports: [
     BrowserModule,

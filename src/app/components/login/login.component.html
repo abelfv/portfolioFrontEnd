@@ -3,11 +3,11 @@
   <div class="row">
     <div class="col-sm-1 col-md-3 col-lg-6 col-xl-6 col-xxl-7">
       <div class="card">
-        <form #f="ngForm" (ngSubmit)="onLogin()" nonvalidate>
+        <form #f="ngForm" (ngSubmit)="onLogin()" nonvalidate class="box">
           <h1>INGRESO</h1>
           <p> INGRESA TU USUARIO Y CONTRASEÑA PARA ENTRAR</p>
-          <input type="email" name="nombreUsuario" id="nombreUsuario" for="nombreUsuario" placeholder="NOMBRE DE USUARIO" [(ngModel)]="nombreUsuario" required>
-          <input type="password" name="contraseña" id="contraseña" for="contraseña" placeholder="CONTRASEÑA" [(ngModel)]="contraseña" required>
+          <input type="text" name="nombreUsuario" id="nombreUsuario" for="nombreUsuario" placeholder="NOMBRE DE USUARIO" [(ngModel)]="nombreUsuario" required>
+          <input type="password" name="contraseña" id="contraseña" for="contraseña" placeholder="CONTRASEÑA" [(ngModel)]="contra" required>
           <input type="submit" name="" value="INGRESAR" href="#">
           <div class="col-md-12">
             <ul class="social-network social-circle">

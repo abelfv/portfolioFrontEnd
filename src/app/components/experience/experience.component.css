@@ -15,11 +15,15 @@ h1, h3{
   display: inline;
 }
 
+.table{
+  color: rgb(255, 255, 255);
+}
+
 .titulo{
   text-align: center;
   margin: 20px 0px 20px;
   width: 500px;
-  color: rgb(2, 2, 2);
+  color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   box-shadow: 5px 5px 5px rgb(0, 4, 255);
