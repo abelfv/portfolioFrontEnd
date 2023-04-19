@@ -1,126 +1,46 @@
-
 <div class="row">
   <div>
     <h1 class="titulo">HABILIDADES</h1>
   </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-  [percent]="95"
-  [titleColor]="'#ff0040'"
-  [titleFontSize]="'30'"
-  [radius]="80"
-  [subtitle]="'HTML5'"
-  [subtitleFontSize]="'25'"
-  [subtitleColor]="'#FFFFFF'"
-  [space]="10"
-  [unitsColor]="'#FF1D23'"
-  [unitsFontSize]="'30'"
-  [outerStrokeWidth]="15"
-  [innerStrokeWidth]="7"
-  [outerStrokeColor]="'#0000ff'"
-  [innerStrokeColor]="'#ff0040'"
-  [animation]="true"
-  [animationDuration]="300"
-></circle-progress>
+
+  <div class="col-lg-2">
+    <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">NUEVA HABILIDAD</button>
   </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
+  <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
     <circle-progress
-  [percent]="85"
-  [titleColor]="'#ff0040'"
-  [titleFontSize]="'30'"
-  [radius]="80"
-  [subtitle]="'CSS3'"
-  [subtitleFontSize]="'25'"
-  [subtitleColor]="'#FFFFFF'"
-  [space]="10"
-  [unitsColor]="'#FF1D23'"
-  [unitsFontSize]="'30'"
-  [outerStrokeWidth]="15"
-  [innerStrokeWidth]="7"
-  [outerStrokeColor]="'#0000ff'"
-  [innerStrokeColor]="'#ff0040'"
-  [animation]="true"
-  [animationDuration]="300"
-></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-  [percent]="75"
-  [titleColor]="'#ff0040'"
-  [titleFontSize]="'30'"
-  [radius]="80"
-  [subtitle]="'JAVASCRIPT'"
-  [subtitleFontSize]="'17'"
-  [subtitleColor]="'#FFFFFF'"
-  [space]="10"
-  [unitsColor]="'#FF1D23'"
-  [unitsFontSize]="'30'"
-  [outerStrokeWidth]="15"
-  [innerStrokeWidth]="7"
-  [outerStrokeColor]="'#0000ff'"
-  [innerStrokeColor]="'#ff0040'"
-  [animation]="true"
-  [animationDuration]="300"
-></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-  [percent]="75"
-  [titleColor]="'#ff0040'"
-  [titleFontSize]="'30'"
-  [radius]="80"
-  [subtitle]="'SQL Y JAVA'"
-  [subtitleFontSize]="'18'"
-  [subtitleColor]="'#FFFFFF'"
-  [space]="10"
-  [unitsColor]="'#FF1D23'"
-  [unitsFontSize]="'30'"
-  [outerStrokeWidth]="15"
-  [innerStrokeWidth]="7"
-  [outerStrokeColor]="'#0000ff'"
-  [innerStrokeColor]="'#ff0040'"
-  [animation]="true"
-  [animationDuration]="300"
-></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-  [percent]="100"
-  [titleColor]="'#ff0040'"
-  [titleFontSize]="'30'"
-  [radius]="80"
-  [subtitle]="'ETICA'"
-  [subtitleFontSize]="'25'"
-  [subtitleColor]="'#FFFFFF'"
-  [space]="10"
-  [unitsColor]="'#FF1D23'"
-  [unitsFontSize]="'30'"
-  [outerStrokeWidth]="15"
-  [innerStrokeWidth]="7"
-  [outerStrokeColor]="'#0000ff'"
-  [innerStrokeColor]="'#ff0040'"
-  [animation]="true"
-  [animationDuration]="300"
-></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-  [percent]="90"
-  [titleColor]="'#ff0040'"
-  [titleFontSize]="'30'"
-  [radius]="80"
-  [subtitle]="'COMUNICACION'"
-  [subtitleFontSize]="'12'"
-  [subtitleColor]="'#FFFFFF'"
-  [space]="10"
-  [unitsColor]="'#FF1D23'"
-  [unitsFontSize]="'30'"
-  [outerStrokeWidth]="15"
-  [innerStrokeWidth]="7"
-  [outerStrokeColor]="'#0000ff'"
-  [innerStrokeColor]="'#ff0040'"
-  [animation]="true"
-  [animationDuration]="300"
-></circle-progress>
+    [percent]="(skill.porcentaje)"
+    [titleColor]="'#ff0040'"
+    [titleFontSize]="'30'"
+    [radius]="80"
+    [subtitle]="(skill.nombre)"
+    [subtitleFontSize]="'25'"
+    [subtitleColor]="'#FFFFFF'"
+    [space]="10"
+    [unitsColor]="'#FF1D23'"
+    [unitsFontSize]="'30'"
+    [outerStrokeWidth]="15"
+    [innerStrokeWidth]="7"
+    [outerStrokeColor]="'#0000ff'"
+    [innerStrokeColor]="'#ff0040'"
+    [animation]="true"
+    [animationDuration]="300"
+    ></circle-progress>
+
+    <div>
+    <td *ngIf="isLogged">
+      <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
+        <i class="bi bi-pencil-square"></i>
+        EDITAR
+      </button>
+    </td>
+    <td *ngIf="isLogged">
+      <button class="btn btn-danger" (click)="delete(skill.id)">
+        <i class="bi bi-x-octagon-fill"></i>
+        BORRAR
+      </button>
+    </td>
+    </div>
+
+
   </div>
 </div>
