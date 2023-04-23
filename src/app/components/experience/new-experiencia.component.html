@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div>
-      <form #f="ngForm" (ngSubmit)="onCreate()" novalidate >
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
         <div class="form-group">
           <label for="nombreE">NOMBRE DE LA EMPRESA</label>
           <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
@@ -10,7 +10,7 @@
           <label for="descripcionE">ACTIVIDAD INVOLUCRADA</label>
           <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
         </div>
-        <button class="btn btn-primary">
+        <button class="btn btn-light">
           AGREGAR
         </button>
       </form>

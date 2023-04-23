@@ -14,7 +14,7 @@ export class EducacionService {
   constructor(private httpClient : HttpClient) { }
 
   public lista(): Observable<Educacion[]>{
-    return this.httpClient.get<Educacion[]>(this.URL + 'lista');
+    return this.httpClient.get<Educacion[]>(this.URL + '/lista');
   }
 
   public detail(id: number): Observable<Educacion>{

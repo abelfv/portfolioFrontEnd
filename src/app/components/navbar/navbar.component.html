@@ -22,6 +22,6 @@
   <div>
     <img src="../../../assets/registrarse.png" id="loginimg">
     <input type="button" value="ENTRADA" id="btn-entrar" (click)="login()" *ngIf="!isLogged">
-    <input type="button" value="SALIDA" id="btn-entrar" (click)="onLogOut()" *ngIf="!isLogged">
+    <input type="button" value="SALIDA" id="btn-entrar" (click)="onLogOut()" *ngIf="isLogged">
   </div>
 </div>
