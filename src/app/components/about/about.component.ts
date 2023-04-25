@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { usuario } from 'src/app/model/usuario.model';
+import { persona } from 'src/app/model/persona.model';
 import { TokenService } from 'src/app/service/token.service';
-import { UsuarioService } from 'src/app/service/usuario.service';
+import { personaService } from 'src/app/service/persona.service';
 
 @Component({
   selector: 'app-about',
@@ -9,9 +9,9 @@ import { UsuarioService } from 'src/app/service/usuario.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent  implements OnInit{
-  usuario: usuario = null;
+  persona: persona = null;
 
-  constructor(public usuarioService: UsuarioService, private tokenService: TokenService) { }
+  constructor(public personaService: personaService, private tokenService: TokenService) { }
   isLogged = false;
 
   ngOnInit(): void {
@@ -24,6 +24,6 @@ export class AboutComponent  implements OnInit{
   }
 
   cargarUsuario(){
-    this.usuarioService.detail(1).subscribe(data => (this.usuario = data))
+    this.personaService.detail(1).subscribe(data => {this.persona = data})
   }
 }

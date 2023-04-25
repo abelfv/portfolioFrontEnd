@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SExperienciaService {
 
-  expURL = 'https://portfolio-abeldev.onrender.com/explab/'
+  expURL = 'http://localhost:8080/explab/'
 
   constructor(private httpClient: HttpClient) { }
 
