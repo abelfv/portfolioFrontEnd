@@ -11,14 +11,52 @@ div{
   margin-right: 0px;
 }
 
-h1, h3{
+h1, h2, h5{
   display: inline;
+  color: white;
+}
+
+.colortxt{
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 17, 255);
+  text-align: center;
+}
+
+.centercnt{
+  text-align: center;
+  font-weight: bold;
+}
+
+.edu{
+  box-shadow: 5px 5px rgb(0, 255, 64);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-left: 20px;
+  border: solid 1px rgb(0, 0, 0);
+  border-radius: 50px 0px 50px 0px;
+  -webkit-border-radius: 50px 0px 50px 0px;
+  -moz-border-radius: 50px 0px 50px 0px;
+  -ms-border-radius: 50px 0px 50px 0px;
+  -o-border-radius: 50px 0px 50px 0px;
+}
+
+.edu:hover{
+  background-color: rgb(0, 255, 13);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 
 .titulo{
   text-align: center;
-  margin: 20px 0px 20px;
-  width: 350px;
+  margin: 20px 15px 20px;
+  width: 320px;
   color: rgb(2, 2, 2);
   background-color: rgb(255, 255, 255);
   border-radius: 20px;

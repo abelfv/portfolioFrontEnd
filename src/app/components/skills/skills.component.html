@@ -1,11 +1,9 @@
 <div class="row">
-  <div>
-    <h1 class="titulo">HABILIDADES</h1>
+  <h1 class="titulo">HABILIDADES</h1>
+  <div class="col-lg-12">
+    <button type="button" routerLink="/newskill" class="btn btn-light skill" *ngIf="isLogged">AGREGAR NUEVA HABILIDAD</button>
   </div>
 
-  <div class="col-lg-2">
-    <button type="button" routerLink="/newskill" class="btn btn-light" *ngIf="isLogged">NUEVA HABILIDAD</button>
-  </div>
   <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
     <circle-progress
     [percent]="(skill.porcentaje)"

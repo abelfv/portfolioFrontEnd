@@ -2,15 +2,33 @@
   <h1 class="titulo">EXPERIENCIA LABORAL</h1>
 
   <div class="col-lg-2">
-    <button type="button" class="btn btn-light" routerLink="/nuevaexp" *ngIf="isLogged">
+    <button type="button" class="btn btn-light exp" routerLink="/nuevaexp" *ngIf="isLogged">
       AGREGAR NUEVA EXPERIENCIA
     </button>
   </div>
 
   <div class="col-lg-11">
+    <br>
     <table class="table">
+      <thead class="colortxt">
+        <tr>
+          <td>
+            <b>NOMBRE DE LA EMPRESA</b>
+          </td>
+          <td>
+            <b>DESCRIPCION DE LA ACTIVIDAD</b>
+          </td>
+          <td *ngIf="isLogged">
+            <b>MODIFICAR</b>
+          </td>
+          <td *ngIf="isLogged">
+            <b>ELIMINAR</b>
+          </td>
+        </tr>
+      </thead>
+        <br>
       <tbody>
-        <tr *ngFor="let Experiencia of expe">
+        <tr *ngFor="let Experiencia of expe" class="centercnt">
           <td>
             <h2>{{Experiencia.nombreE}}</h2>
           </td>

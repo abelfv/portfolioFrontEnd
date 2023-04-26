@@ -1,19 +1,23 @@
 <div class="container">
   <div class="row">
-    <div>
+    <div class="box">
+      <br>
       <form #f="ngForm" (ngSubmit)="onCreate()" novalidate >
         <div class="form-group">
           <label for="nombreE">NOMBRE DEL TITULO O INSTITUCION</label>
           <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
         </div>
+        <br>
         <div class="form-group">
-          <label for="descripcionE">DESCRIPCION</label>
+          <label for="descripcionE">FECHA Y TITULO OBTENIDO</label>
           <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
         </div>
-        <button class="btn btn-primary">
+        <br>
+        <button class="btn btn-primary update">
           AGREGAR
         </button>
       </form>
+      <br>
     </div>
   </div>
 </div>
