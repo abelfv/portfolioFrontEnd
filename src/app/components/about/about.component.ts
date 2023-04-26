@@ -9,13 +9,13 @@ import { personaService } from 'src/app/service/persona.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent  implements OnInit{
-  persona: persona = null;
+  persona: persona = null
 
   constructor(public personaService: personaService, private tokenService: TokenService) { }
   isLogged = false;
 
   ngOnInit(): void {
-    this.cargarUsuario();
+    this.cargarPersona();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     } else {
@@ -23,7 +23,7 @@ export class AboutComponent  implements OnInit{
     }
   }
 
-  cargarUsuario(){
+  cargarPersona(){
     this.personaService.detail(1).subscribe(data => {this.persona = data})
   }
 }

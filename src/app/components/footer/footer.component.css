@@ -7,6 +7,27 @@
   border-bottom: 1px dashed #00ff40;
 }
 
+.boton-volver-arriba {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  width: 75px;
+  height: 75px;
+  padding-top: 10px;
+  text-align: center;
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 50px;
+  opacity: 0.5;
+  font-weight: bold;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+
 .footer > * {
   flex:  1 100%;
 }

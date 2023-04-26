@@ -4,8 +4,34 @@ div {
   text-align: center;
 }
 
+.about{
+  box-shadow: 5px 5px rgb(255, 0, 0);
+  background-color: rgb(98, 0, 255);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  width: 250px;
+  border: solid 1px rgb(0, 0, 0);
+  border-radius: 50px 0px 50px 0px;
+  -webkit-border-radius: 50px 0px 50px 0px;
+  -moz-border-radius: 50px 0px 50px 0px;
+  -ms-border-radius: 50px 0px 50px 0px;
+  -o-border-radius: 50px 0px 50px 0px;
+}
+
+.about:hover{
+  background-color: rgb(0, 255, 242);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
 .row {
   padding: 20px;
+  justify-content: space-around;
   margin-right: 0px;
   border-left: dashed 1px rgb(60, 255, 0);
   border-right: dashed 1px rgb(60, 255, 0);

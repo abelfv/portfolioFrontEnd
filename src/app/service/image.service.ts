@@ -24,8 +24,8 @@ export class ImageService {
   getImages(){
     const imagesRef = ref(this.storage, 'imagen');
     list(imagesRef)
-    .then(async Response => {
-      for(let item of Response.items){
+    .then(async response => {
+      for(let item of response.items){
         this.url = await getDownloadURL(item);
       }
     })
